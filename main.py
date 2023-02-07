@@ -247,7 +247,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
                     [
                         InlineKeyboardButton(
                             "🤖 Join Updates Channel",
-                            url="t.me/GreyMatter_Bots",
+                            url="t.me/urlbypass",
                         )
                     ],
                 ]),
@@ -262,7 +262,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
     except Exception:
         await cmd.reply_text(
             text=
-            "Something went Wrong! Contact my [Support Group](https://t.me/greymatters_bots_discussion)",
+            "Something went Wrong! Contact my [Owner](https://t.me/vijaysahu_1)",
             disable_web_page_preview=True,
         )
         return 0
