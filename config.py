@@ -1,10 +1,10 @@
 import os
 import logging
 class Config:
-    API_ID = int(os.environ.get("API_ID", ""))
-    API_HASH = os.environ.get("API_HASH", "")       
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-    Channel_id = os.environ.get("Channel_id", "")
+    API_ID = int(os.environ.get("API_ID", "28187851"))
+    API_HASH = os.environ.get("API_HASH", "9846014bd1d5705a4171f0954bf0e4e1")       
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5922694056:AAHy1upWpe-K2Iwhx7VXEvJbeY7h5e_QPg0")
+    Channel_id = os.environ.get("Channel_id", "-1001890251250")
     Drivebuzz_crypt = os.environ.get("Drivebuzz_crypt", "")
     Drivefire_crypt = os.environ.get("Drivefire_crypt", "")
     Jiodrive_crypt = os.environ.get("Jiodrive_crypt", "")
