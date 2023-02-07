@@ -528,8 +528,7 @@ async def drivebuzz_bypass(url: str) -> str:
 async def anonfiles_bypass(anonfiles_url: str) -> str:
     soup = BeautifulSoup((await Httpx.get(anonfiles_url)).content,
                          "html.parser")
-    return dlurl["href"] if (dlurl = soup.find(id="download-url")) else ""
-
+    
 
 async def antfiles_bypass(antfiles_url: str) -> str:
     soup = BeautifulSoup((await Httpx.get(antfiles_url)).content,
