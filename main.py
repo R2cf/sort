@@ -220,9 +220,9 @@ async def start(_: pbot, m: Message):
 You just need to send me the message containing the links! I will replace the un shorted link and send you back!
 Do wait for 10 seconds for each link to process and bypass after sending the links!
 
-**Support: @GreyMatter_Bots!**
+**Support: @urlbypass!**
 
-**Subscribe: https://youtube.com/@GreyMattersYT**""")
+**Subscribe: https://t.me/urlbypass**""")
     return
 
 
@@ -234,7 +234,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
                            ChatMemberStatus.RESTRICTED):
             await cmd.reply_text(
                 text=
-                "Sorry, You are Banned to use me. Contact my [Support Group](https://t.me/greymatters_bots_discussion).",
+                "Sorry, You are Banned to use me. Contact my [Owner](https://t.me/vijaysahu_1).",
                 disable_web_page_preview=True,
             )
             return 0
