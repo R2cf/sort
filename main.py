@@ -220,9 +220,9 @@ async def start(_: pbot, m: Message):
 You just need to send me the message containing the links! I will replace the un shorted link and send you back!
 Do wait for 10 seconds for each link to process and bypass after sending the links!
 
-**Support: @urlbypass!**
+**Support: @GreyMatter_Bots!**
 
-**Subscribe: https://t.me/urlbypass**""")
+**Subscribe: https://youtube.com/@GreyMattersYT**""")
     return
 
 
@@ -234,7 +234,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
                            ChatMemberStatus.RESTRICTED):
             await cmd.reply_text(
                 text=
-                "Sorry, You are Banned to use me. Contact my [Owner](https://t.me/vijaysahu_1).",
+                "Sorry, You are Banned to use me. Contact my [Support Group](https://t.me/greymatters_bots_discussion).",
                 disable_web_page_preview=True,
             )
             return 0
@@ -247,7 +247,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
                     [
                         InlineKeyboardButton(
                             "🤖 Join Updates Channel",
-                            url="t.me/urlbypass",
+                            url="t.me/GreyMatter_Bots",
                         )
                     ],
                 ]),
@@ -262,7 +262,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
     except Exception:
         await cmd.reply_text(
             text=
-            "Something went Wrong! Contact my [Owner](https://t.me/vijaysahu_1)",
+            "Something went Wrong! Contact my [Support Group](https://t.me/greymatters_bots_discussion)",
             disable_web_page_preview=True,
         )
         return 0
@@ -528,7 +528,8 @@ async def drivebuzz_bypass(url: str) -> str:
 async def anonfiles_bypass(anonfiles_url: str) -> str:
     soup = BeautifulSoup((await Httpx.get(anonfiles_url)).content,
                          "html.parser")
-    
+    return dlurl["href"] if (dlurl := soup.find(id="download-url")) else ""
+
 
 async def antfiles_bypass(antfiles_url: str) -> str:
     soup = BeautifulSoup((await Httpx.get(antfiles_url)).content,
